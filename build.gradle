@@ -1,0 +1,22 @@
+// Project-level build.gradle (usually in the root of the project)
+
+buildscript {
+    repositories {
+        google() // Define repositories here
+        mavenCentral()
+    }
+
+}
+
+allprojects {
+    repositories {
+        google() // Define repositories here
+        mavenCentral()
+    }
+}
+configurations.all {
+    resolutionStrategy {
+        force 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'
+        // Add other dependencies here if needed
+    }
+}
